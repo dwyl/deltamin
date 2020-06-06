@@ -73,9 +73,9 @@ But we can only try to set a good example to follow.
   give priority to the keyword that appears most frequently in the format.
   e.g: `insert` is used more often than `import`
   so `insert` > `i` and `import` > `im`
+
 + [ ] Create a function for converting the minified version
   _back_ to the "full fat" version of Delta
   before passing it to a consuming library.
-+ [ ] Publish NPM Package: https://www.npmjs.com/package/deltamin
++ [x] Publish NPM Package: https://www.npmjs.com/package/deltamin
 so we can use it!
-![image](https://user-images.githubusercontent.com/194400/83935033-76a61c80-a7ad-11ea-89c5-22b85420e180.png)

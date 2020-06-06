@@ -22,5 +22,32 @@
     "pre-commit": "^1.2.2",
     "tap-nyc": "^1.0.3",
     "tape": "^5.0.0"
-  }
+  },
+  "scripts": {
+    "test": "nyc tape ./test/*.test.js | tap-nyc",
+    "front-end-test": "tape ./front-end-testing/test-complete/* | tap-nyc"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "exclude": [
+      "test/**/*.spec.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "cache": false,
+    "all": true,
+    "report-dir": "./coverage"
+  },
+  "pre-commit": [
+    "test"
+  ]
 }
