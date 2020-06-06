@@ -4,7 +4,7 @@ Minify your Delta format data
 before sending it down the wire
 or saving it to a datastore.
 
-[![Build Status](https://img.shields.io/travis/dwyl/deltamin/master.svg?style=flat-square)](https://travis-ci.org/dwyl/deltamin)
+[![Build Status](https://img.shields.io/travis/com/dwyl/deltamin/master.svg?style=flat-square)](https://travis-ci.com/dwyl/deltamin)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/deltamin/master.svg?style=flat-square)](http://codecov.io/github/dwyl/deltamin?branch=master)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/dwyl/deltamin.svg?style=flat-square)](https://codeclimate.com/github/dwyl/deltamin)
 [![devDependencies Status](https://david-dm.org/dwyl/deltamin/status.svg?style=flat-square)](https://david-dm.org/dwyl/deltamin)
