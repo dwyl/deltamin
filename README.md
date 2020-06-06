@@ -17,9 +17,10 @@ or saving it to a datastore.
 </div>
 
 
-> **Note**: this project is still very much a "work-in-progress".
-If you would like to help us with building it,
-please leave a comment on: https://github.com/dwyl/deltamin/issues/1
+> **Note**: this project is still very much a "work-in-progress". <br />
+If you would like to help us with building it, <br />
+please leave a comment on:
+[deltamin/issues/1](https://github.com/dwyl/deltamin/issues/1)
 
 
 # Why
