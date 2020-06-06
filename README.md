@@ -80,14 +80,14 @@ But we can only try to set a good example to follow.
   e.g: `insert`, `retain`, `text`, `attributes`, etc.
 + [ ] Define short versions for all the keywords
   e.g: `i`, `r`, `t`, `a`
-  + [ ] Make the _minified_ keywords as short as possible
+  + [x] Make the _minified_ keywords as short as possible
   (_that's the whole point of this project!_)
-  + [ ] wherever there is a keyword that starts with the same character,
+  + [x] wherever there is a keyword that starts with the same character,
   give priority to the keyword that appears most frequently in the format.
   e.g: `insert` is used more often than `import`
   so `insert` > `i` and `import` > `im`
 
-+ [ ] Create a function for converting the minified version
++ [x] Create `unminify/1` function for converting the minified version
   _back_ to the "full fat" version of Delta
   before passing it to a consuming library.
 + [x] Publish NPM Package: https://www.npmjs.com/package/deltamin
