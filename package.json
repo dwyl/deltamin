@@ -1,0 +1,20 @@
+{
+  "name": "deltamin",
+  "version": "1.0.0",
+  "description": "Minify your Delta format data before sending it down the wire or saving it to a datastore.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwyl/deltamin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwyl/deltamin/issues"
+  },
+  "homepage": "https://github.com/dwyl/deltamin#readme"
+}
