@@ -1,6 +1,6 @@
 {
   "name": "deltamin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minify your Delta format data before sending it down the wire or saving it to a datastore.",
   "main": "lib/index.js",
   "repository": {

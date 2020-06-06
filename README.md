@@ -73,10 +73,33 @@ in a world where
 is server-rendering and _streaming_ 4K games in realtime ... 🤦  
 But we can only try to set a good example to follow.
 
+# How?
+
+Install the `node.js` dependency in your project:
+
+```sh
+npm install deltamin --save
+```
+
+Use it before sending the data to the server:
+
+```js
+const deltamin = require('deltamin');
+const data = deltamin.minify(delta);
+channel.push('update', data);
+```
+
+> **Note**: this example is for sending data via a Phoenix Channel. <br />
+See: https://github.com/dwyl/phoenix-chat-example
+
+
+
 
 # Todo
 
-+ [ ] List all the keywords in the Delta format
+You can ***help us*** finish this module
+by going through the Delta spec and add all keywords to the `map`
+in the `lib/index.js` file.
   e.g: `insert`, `retain`, `text`, `attributes`, etc.
 + [ ] Define short versions for all the keywords
   e.g: `i`, `r`, `t`, `a`
@@ -86,9 +109,4 @@ But we can only try to set a good example to follow.
   give priority to the keyword that appears most frequently in the format.
   e.g: `insert` is used more often than `import`
   so `insert` > `i` and `import` > `im`
-
-+ [x] Create `unminify/1` function for converting the minified version
-  _back_ to the "full fat" version of Delta
-  before passing it to a consuming library.
-+ [x] Publish NPM Package: https://www.npmjs.com/package/deltamin
-so we can use it!
++ [ ] Add more examples to `README.md`
