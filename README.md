@@ -1,3 +1,5 @@
+<div align="center">
+
 # `deltamin`
 
 Minify your Delta format data
@@ -6,11 +8,13 @@ or saving it to a datastore.
 
 [![Build Status](https://img.shields.io/travis/com/dwyl/deltamin/master.svg?style=flat-square)](https://travis-ci.com/dwyl/deltamin)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/deltamin/master.svg?style=flat-square)](http://codecov.io/github/dwyl/deltamin?branch=master)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/dwyl/deltamin.svg?style=flat-square)](https://codeclimate.com/github/dwyl/deltamin)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/dwyl/learn-tape.svg?style=flat-square)](https://codeclimate.com/github/dwyl/deltamin)
 [![devDependencies Status](https://david-dm.org/dwyl/deltamin/status.svg?style=flat-square)](https://david-dm.org/dwyl/deltamin)
 [![devDependencies Status](https://david-dm.org/dwyl/deltamin/dev-status.svg?style=flat-square)](https://david-dm.org/dwyl/deltamin?type=dev)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/deltamin/issues)
 [![HitCount](http://hits.dwyl.io/dwyl/deltamin.svg)](http://hits.dwyl.io/dwyl/deltamin)
+
+</div>
 
 
 > **Note**: this project is still very much a "work-in-progress".
@@ -29,7 +33,7 @@ const delta = new Delta([
   { insert: 'Grey', attributes: { color: '#ccc' } }
 ]);
 ```
-![image](https://user-images.githubusercontent.com/194400/83935475-d0104a80-a7b1-11ea-887c-dd43a415816f.png)
+![delta-full-fat](https://user-images.githubusercontent.com/194400/83935475-d0104a80-a7b1-11ea-887c-dd43a415816f.png)
 
 From the Developer perspective,
 having a verbose format makes perfect sense
@@ -54,7 +58,7 @@ const delta = new Delta([
 ]);
 ```
 
-![image](https://user-images.githubusercontent.com/194400/83935485-dc94a300-a7b1-11ea-9f89-e9760f56e093.png)
+![delta-minified](https://user-images.githubusercontent.com/194400/83935485-dc94a300-a7b1-11ea-9f89-e9760f56e093.png)
 
 (157 - 117 / 157) = **25% bandwidth saving**.
 It might not _feel_ like much of a saving in this trivial example,
