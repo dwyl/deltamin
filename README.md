@@ -16,9 +16,14 @@ or saving it to a datastore.
 
 </div>
 
+<br />
 
 > **Note**: this project is still very much a "work-in-progress". <br />
-If you would like to help us with building it, <br />
+> We need _your_ help to ensure that the keyword list is complete. <br />
+> If you are _using_ the `Delta` format and want to help with `deltamin`, <br />
+> check [`/lib/index.js#L4`](https://github.com/dwyl/deltamin/blob/c32f1d02b412b244e1f68d9f2c512e577c040972/lib/index.js#L4) and confirm all the keywords are there. <br />
+If you find a keyword in `Delta` that isn't in the
+[`map`](https://github.com/dwyl/deltamin/blob/c32f1d02b412b244e1f68d9f2c512e577c040972/lib/index.js#L4), <br />
 please leave a comment on:
 [deltamin/issues/1](https://github.com/dwyl/deltamin/issues/1)
 
