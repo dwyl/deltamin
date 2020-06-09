@@ -19,3 +19,37 @@ test('unminify', function(t) {
   t.deepEqual(result, delta);
   t.end();
 });
+
+
+test('minify list of ops', function(t) {
+  const delta = {"ops":[
+    {"insert":"Hello Simon!"},{"attributes":{"list":"ordered"},"insert":"\n"},
+    {"insert":"Checklist item"},{"attributes":{"list":"checked"},"insert":"\n"},
+    {"insert":"Bullet point"},{"attributes":{"list":"bullet"},"insert":"\n"}
+  ]}
+  const min = {"o":[
+    {"i":"Hello Simon!"},{"a":{"li":"ordered"},"i":"\n"},
+    {"i":"Checklist item"},{"a":{"li":"checked"},"i":"\n"},
+    {"i":"Bullet point"},{"a":{"li":"bullet"},"i":"\n"}
+  ]}
+  const result = minify(delta);
+  t.deepEqual(result, min);
+  t.end();
+});
+
+test('unminify list of ops', function(t) {
+  const delta = {"ops":[
+    {"insert":"Hello Simon!"},{"attributes":{"list":"ordered"},"insert":"\n"},
+    {"insert":"Checklist item"},{"attributes":{"list":"checked"},"insert":"\n"},
+    {"insert":"Bullet point"},{"attributes":{"list":"bullet"},"insert":"\n"}
+  ]}
+  const min = {"o":[
+    {"i":"Hello Simon!"},{"a":{"li":"ordered"},"i":"\n"},
+    {"i":"Checklist item"},{"a":{"li":"checked"},"i":"\n"},
+    {"i":"Bullet point"},{"a":{"li":"bullet"},"i":"\n"}
+  ]}
+  const result = unminify(min);
+  t.deepEqual(result, delta);
+  // console.log(JSON.stringify(result, null, 2));
+  t.end();
+});
