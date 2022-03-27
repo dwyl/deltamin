@@ -9,10 +9,8 @@ or saving it to a datastore.
 [![Build Status](https://img.shields.io/travis/com/dwyl/deltamin/master.svg?style=flat-square)](https://travis-ci.com/dwyl/deltamin)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/deltamin/master.svg?style=flat-square)](http://codecov.io/github/dwyl/deltamin?branch=master)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/dwyl/learn-tape.svg?style=flat-square)](https://codeclimate.com/github/dwyl/deltamin)
-[![devDependencies Status](https://david-dm.org/dwyl/deltamin/status.svg?style=flat-square)](https://david-dm.org/dwyl/deltamin)
-[![devDependencies Status](https://david-dm.org/dwyl/deltamin/dev-status.svg?style=flat-square)](https://david-dm.org/dwyl/deltamin?type=dev)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/deltamin/issues)
-[![HitCount](http://hits.dwyl.io/dwyl/deltamin.svg)](http://hits.dwyl.io/dwyl/deltamin)
+[![HitCount](http://hits.dwyl.com/dwyl/deltamin.svg)](http://hits.dwyl.com/dwyl/deltamin)
 
 </div>
 
