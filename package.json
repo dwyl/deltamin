@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "nyc tape ./test/*.test.js | tap-nyc",
-    "jsonlint": "node node_modules/.bin/jsonlint lib/map.json -q"
+    "jsonlint": "node node_modules/.bin/jsonlint map.json -q"
   },
   "nyc": {
     "check-coverage": true,
