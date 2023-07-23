@@ -1,0 +1,21 @@
+{
+    "attributes": "a",
+    "bold": "b",
+    "bullet": "bu",
+    "color": "c",
+    "delete": "d",
+    "diff": "di",
+    "image": "ig",
+    "import": "im",
+    "index": "in",
+    "insert": "i",
+    "italic": "it",
+    "length": "le",
+    "link": "l",
+    "list": "li",
+    "offset": "of",
+    "ops": "o",
+    "ordered": "or",
+    "retain": "r",
+    "underline": "u"
+  }
