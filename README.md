@@ -6,7 +6,7 @@ Minify your Delta format data
 before sending it down the wire
 or saving it to a datastore.
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/terminate/js.yml?label=build&style=flat-square&branch=main)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/deltamin/js.yml?label=build&style=flat-square&branch=main)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/deltamin/main.svg?style=flat-square)](http://codecov.io/github/dwyl/deltamin?branch=main)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/dwyl/learn-tape.svg?style=flat-square)](https://codeclimate.com/github/dwyl/deltamin)
 [![Dependencies None](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://github.com/dwyl/deltamin)
