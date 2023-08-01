@@ -1,6 +1,6 @@
 {
   "name": "deltamin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minify your Delta format data before sending it down the wire or saving it to a datastore.",
   "main": "lib/index.js",
   "repository": {
@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/dwyl/deltamin#readme",
   "devDependencies": {
+    "jsonlint": "^1.6.3",
     "nyc": "^15.0.1",
     "pre-commit": "^1.2.2",
     "tap-nyc": "^1.0.3",
@@ -22,7 +23,7 @@
   },
   "scripts": {
     "test": "nyc tape ./test/*.test.js | tap-nyc",
-    "front-end-test": "tape ./front-end-testing/test-complete/* | tap-nyc"
+    "jsonlint": "node node_modules/.bin/jsonlint map.json -q"
   },
   "nyc": {
     "check-coverage": true,
@@ -45,6 +46,7 @@
     "report-dir": "./coverage"
   },
   "pre-commit": [
-    "test"
+    "test",
+    "jsonlint"
   ]
 }

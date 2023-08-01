@@ -1,15 +1,19 @@
 <div align="center">
 
-# `deltamin`
+# `deltamin` Δ
 
 Minify your Delta format data
 before sending it down the wire
 or saving it to a datastore.
 
-[![Build Status](https://img.shields.io/travis/com/dwyl/deltamin/master.svg?style=flat-square)](https://travis-ci.com/dwyl/deltamin)
-[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/deltamin/master.svg?style=flat-square)](http://codecov.io/github/dwyl/deltamin?branch=master)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/deltamin/js.yml?label=build&style=flat-square&branch=main)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/deltamin/main.svg?style=flat-square)](http://codecov.io/github/dwyl/deltamin?branch=main)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/dwyl/learn-tape.svg?style=flat-square)](https://codeclimate.com/github/dwyl/deltamin)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/deltamin/issues)
+[![Dependencies None](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://github.com/dwyl/deltamin)
+[![Hex pm](http://img.shields.io/hexpm/v/quotes.svg?style=flat-square)](https://hex.pm/packages/quotes)
+[![npm package version](https://img.shields.io/npm/v/deltamin.svg?style=flat-square)](https://www.npmjs.com/package/deltamin)
+[![pub package](https://img.shields.io/pub/v/deltamin.svg?style=flat-square)](https://pub.dev/packages/deltamin)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/deltamin/issues)
 [![HitCount](http://hits.dwyl.com/dwyl/deltamin.svg)](http://hits.dwyl.com/dwyl/deltamin)
 
 </div>
@@ -99,7 +103,7 @@ See: https://github.com/dwyl/phoenix-chat-example
 
 
 
-# Todo
+# Todo `#HelpWanted`
 
 You can ***help us*** finish this module
 by going through the Delta spec and add all keywords to the `map`
@@ -114,3 +118,17 @@ in the `lib/index.js` file.
   e.g: `insert` is used more often than `import`
   so `insert` > `i` and `import` > `im`
 + [ ] Add more examples to `README.md`
+
+
+# Port this to `Dart` and `Elixir`
+
+Similar to how our "Toy" project 
+[`/quotes`](https://github.com/dwyl/quotes)
+contains the code for `Elixir`, `JavaScript` and `Dart` 
+in a _single_ repo.
+More detail in: 
+[issues#10](https://github.com/dwyl/deltamin/issues/10)
+
+We need _your_ help with this too. 🙏
+Ideally we would have a `JSON` "Dictionary"
+that allows us to keep the mapping defined in a _single_ place. 
