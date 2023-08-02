@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 import 'package:collection/collection.dart';
 
 void main() {
-  group('tests', () {
+  group('testing', () {
     final equality = DeepCollectionEquality();
 
     test('minify', () {

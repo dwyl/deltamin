@@ -32,11 +32,10 @@ final _mapReversed = _map.map((k, v) => MapEntry(v, k));
 Map<dynamic, dynamic> minify(Map<String, dynamic> obj) {
   final min = {};
   final keys = obj.keys.toList();
-  var n = keys.length, key = "insert", k = "i";
+  var n = keys.length, key = "insert";
 
   while (n-- > 0) {
     key = keys[n];
-    k = _map[key].toString();
 
     // Check if the value of the key is an array
     if (obj[key] is List) {
@@ -62,11 +61,10 @@ Map<dynamic, dynamic> minify(Map<String, dynamic> obj) {
 Map<dynamic, dynamic> unminify(Map<String, dynamic> obj) {
   final expanded = {};
   final keys = obj.keys.toList();
-  var n = keys.length, key = "insert", k = "i";
+  var n = keys.length, key = "insert";
 
   while (n-- > 0) {
     key = keys[n];
-    k = _mapReversed[key].toString();
 
     // Check if the value of the key is an array
     if (obj[key] is List) {

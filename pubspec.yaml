@@ -8,6 +8,7 @@ environment:
   sdk: ^3.0.5
 
 dependencies:
+  collection: ^1.18.0
 
 dev_dependencies:
   lints: ^2.0.0
