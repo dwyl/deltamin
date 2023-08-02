@@ -15,17 +15,17 @@ Map<String, String> _getMap() {
   final jsonMap = jsonDecode(jsonString);
 
   // Converting `Map<String, dynamic>` to `Map<String, String>`.
-  Map<String, String> ret = Map<String, String>();
+  Map<String, String> ret = <String, String>{};
   jsonMap.forEach((key, value) => ret[key] = value.toString());
 
   return ret;
 }
 
 /// Map of Delta keywords to abbreviated versions.
-final map = _getMap();
+final _map = _getMap();
 
 /// Reversed map of abbreviated versions to Delta keywords.
-final mapReversed = map.map((k, v) => MapEntry(v, k));
+final _mapReversed = _map.map((k, v) => MapEntry(v, k));
 
 /// Accepts a Delta object [obj]
 /// and returns the minified version with abbreviated keys.
@@ -36,21 +36,21 @@ Map<dynamic, dynamic> minify(Map<String, dynamic> obj) {
 
   while (n-- > 0) {
     key = keys[n];
-    k = map[key].toString();
+    k = _map[key].toString();
 
     // Check if the value of the key is an array
     if (obj[key] is List) {
-      min[map[key]] = obj[key].map((j) => {minify(j)});
+      min[_map[key]] = obj[key].map((j) => minify(j));
     }
 
     // Check if it's another Map<String, dynamic>
     else if (obj[key] is Map) {
-      min[map[key]] = minify(obj[key]);
+      min[_map[key]] = minify(obj[key]);
     }
 
     // Else, we minify normally.
     else {
-      min[map[key]] = obj[key];
+      min[_map[key]] = obj[key];
     }
   }
 
@@ -66,18 +66,18 @@ Map<dynamic, dynamic> unminify(Map<String, dynamic> obj) {
 
   while (n-- > 0) {
     key = keys[n];
-    k = mapReversed[key].toString();
+    k = _mapReversed[key].toString();
 
     // Check if the value of the key is an array
     if (obj[key] is List) {
-      expanded[mapReversed[key]] = obj[key].map((j) => {unminify(j)});
+      expanded[_mapReversed[key]] = obj[key].map((j) => unminify(j));
     }
 
     // Check if it's another Map<String, dynamic>
     else if (obj[key] is Map) {
-      expanded[mapReversed[key]] = unminify(obj[key]);
+      expanded[_mapReversed[key]] = unminify(obj[key]);
     } else {
-      expanded[mapReversed[key]] = obj[key];
+      expanded[_mapReversed[key]] = obj[key];
     }
   }
 
