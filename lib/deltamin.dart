@@ -15,7 +15,7 @@ Map<String, String> _getMap() {
   final jsonMap = jsonDecode(jsonString);
 
   // Converting `Map<String, dynamic>` to `Map<String, String>`.
-  Map<String, String> ret = <String, String>{};
+  var ret = <String, String>{};
   jsonMap.forEach((key, value) => ret[key] = value.toString());
 
   return ret;

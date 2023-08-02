@@ -10,11 +10,11 @@ void main() {
 
 
   // Minify the delta object
-  Map<String, dynamic> minifiedDelta = minify(delta);
+  var minifiedDelta = minify(delta);
 
   // Unminify the minified object.
   // Should be the same as the original delta object
-  Map<String, dynamic> unminifiedDelta = unminify(minifiedDelta);
+  var unminifiedDelta = unminify(minifiedDelta);
 
   print(unminifiedDelta);
   // { "insert": 'Gandalf', "attributes": {"bold": true} }
