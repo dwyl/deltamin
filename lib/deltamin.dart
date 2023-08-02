@@ -29,27 +29,36 @@ final _mapReversed = _map.map((k, v) => MapEntry(v, k));
 
 /// Accepts a Delta object [obj]
 /// and returns the minified version with abbreviated keys.
-Map<dynamic, dynamic> minify(Map<String, dynamic> obj) {
-  final min = {};
+Map<String, dynamic> minify(Map<String, dynamic> obj) {
+  final min = <String, dynamic>{};
   final keys = obj.keys.toList();
   var n = keys.length, key = "insert";
 
   while (n-- > 0) {
     key = keys[n];
+    var mappedAttribute = _map[key];
 
-    // Check if the value of the key is an array
-    if (obj[key] is List) {
-      min[_map[key]] = obj[key].map((j) => minify(j));
+    // Check if mapped attribute exists in the map.
+    if (mappedAttribute != null) {
+      // Check if the value of the key is an array
+      if (obj[key] is List) {
+        min[mappedAttribute] = obj[key].map((j) => minify(j));
+      }
+
+      // Check if it's another Map<String, dynamic>
+      else if (obj[key] is Map) {
+        min[mappedAttribute] = minify(obj[key]);
+      }
+
+      // Else, we minify normally.
+      else {
+        min[mappedAttribute] = obj[key];
+      }
     }
 
-    // Check if it's another Map<String, dynamic>
-    else if (obj[key] is Map) {
-      min[_map[key]] = minify(obj[key]);
-    }
-
-    // Else, we minify normally.
+    // If mapped attribute doesn't exist, we just add it to the minified object as it was originally.
     else {
-      min[_map[key]] = obj[key];
+      min[key] = obj[key];
     }
   }
 
@@ -58,24 +67,33 @@ Map<dynamic, dynamic> minify(Map<String, dynamic> obj) {
 
 /// Accepts a minified Delta object [obj]
 /// and returns the unminified version with abbreviated keys.
-Map<dynamic, dynamic> unminify(Map<String, dynamic> obj) {
-  final expanded = {};
+Map<String, dynamic> unminify(Map<String, dynamic> obj) {
+  final expanded = <String, dynamic>{};
   final keys = obj.keys.toList();
   var n = keys.length, key = "insert";
 
   while (n-- > 0) {
     key = keys[n];
+    var mappedAttribute = _mapReversed[key];
 
-    // Check if the value of the key is an array
-    if (obj[key] is List) {
-      expanded[_mapReversed[key]] = obj[key].map((j) => unminify(j));
+    // Check if mapped attribute exists in the map.
+    if (mappedAttribute != null) {
+      // Check if the value of the key is an array
+      if (obj[key] is List) {
+        expanded[mappedAttribute] = obj[key].map((j) => unminify(j));
+      }
+
+      // Check if it's another Map<String, dynamic>
+      else if (obj[key] is Map) {
+        expanded[mappedAttribute] = unminify(obj[key]);
+      } else {
+        expanded[mappedAttribute] = obj[key];
+      }
     }
 
-    // Check if it's another Map<String, dynamic>
-    else if (obj[key] is Map) {
-      expanded[_mapReversed[key]] = unminify(obj[key]);
-    } else {
-      expanded[_mapReversed[key]] = obj[key];
+    // If mapped attribute doesn't exist, we just add it to the minified object as it was originally.
+    else {
+      expanded[key] = obj[key];
     }
   }
 

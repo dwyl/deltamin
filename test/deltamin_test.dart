@@ -20,6 +20,22 @@ void main() {
       expect(equality.equals(min, result), isTrue);
     });
 
+    test('minify with unmapped attributes', () {
+      final delta = {
+        "insert": 'Gandalf',
+        "unmapped_attribute": "summat",
+        "attributes": {"bold": true}
+      };
+      final min = {
+        "i": 'Gandalf',
+        "unmapped_attribute": "summat",
+        "a": {"b": true}
+      };
+      final result = minify(delta);
+
+      expect(equality.equals(min, result), isTrue);
+    });
+
     test('unminify', () {
       final delta = {
         "insert": 'Gandalf',
@@ -76,6 +92,22 @@ void main() {
       final result = minify(delta);
 
       expect(equality.equals(result, min), isTrue);
+    });
+
+    test('unminify with unmapped attributes', () {
+      final delta = {
+        "insert": 'Gandalf',
+        "someother_attribute": "summat",
+        "attributes": {"bold": true}
+      };
+      final min = {
+        "i": 'Gandalf',
+        "someother_attribute": "summat",
+        "a": {"b": true}
+      };
+      final result = unminify(min);
+
+      expect(equality.equals(delta, result), isTrue);
     });
 
     test('unminify list of ops', () {
