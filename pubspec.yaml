@@ -1,6 +1,6 @@
 name: deltamin
 description: Minify your Delta data before sending it down the wire to save bandwidth.
-version: 0.1.0
+version: 1.0.0
 repository: https://github.com/dwyl/deltamin
 homepage: https://github.com/dwyl/deltamin
 

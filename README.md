@@ -111,7 +111,7 @@ in the `dependencies` section.
 
 ```yaml
 dependencies:
-  deltamin: ^0.1.0
+  deltamin: ^1.0.0
 ```
 
 And run `dart pub get`.
