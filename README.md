@@ -83,6 +83,8 @@ But we can only try to set a good example to follow.
 
 # How?
 
+## `Javascript`
+
 Install the `node.js` dependency in your project:
 
 ```sh
@@ -101,6 +103,64 @@ channel.push('update', data);
 See: https://github.com/dwyl/phoenix-chat-example
 
 
+## `Dart`
+
+You can use `deltamin` on the `Dart` ecosystem, as well!
+To install it, simply add this to your `pubspec.yaml` file,
+in the `dependencies` section.
+
+```yaml
+dependencies:
+  deltamin: ^1.0.0
+```
+
+And run `dart pub get`.
+
+Here's an example on how to use this package.
+
+```dart
+
+import 'package:deltamin/deltamin.dart';
+
+void main() {
+
+  final delta = {
+    "insert": 'Gandalf',
+    "attributes": {"bold": true}
+  };
+
+
+  // Minify the delta object
+  Map<String, dynamic> minifiedDelta = minify(delta);
+
+  // Unminify the minified object.
+  // Should be the same as the original delta object
+  Map<String, dynamic> unminifiedDelta = unminify(minifiedDelta);
+
+  print(unminifiedDelta);
+  // { "insert": 'Gandalf', "attributes": {"bold": true} }
+}
+```
+
+> **Warning:**
+>
+> `Delta` objects that have keys that are not mapped by this package
+> will *not* be minified/unminified,
+> and maintain their original state.
+>
+> For example:
+> ```dart
+>     final delta = {
+>       "insert": 'Gandalf',
+>       "someother_attribute": "summat",
+>       "attributes": {"bold": true}
+>     };
+>     final min = {
+>       "i": 'Gandalf',
+>       "someother_attribute": "summat",
+>       "a": {"b": true}
+>     };
+> ```
 
 
 # Todo `#HelpWanted`
@@ -120,7 +180,7 @@ in the `lib/index.js` file.
 + [ ] Add more examples to `README.md`
 
 
-# Port this to `Dart` and `Elixir`
+# Port this to `Elixir`
 
 Similar to how our "Toy" project 
 [`/quotes`](https://github.com/dwyl/quotes)
