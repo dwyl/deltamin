@@ -16,7 +16,7 @@
   "homepage": "https://github.com/dwyl/deltamin#readme",
   "devDependencies": {
     "jsonlint": "^1.6.3",
-    "nyc": "^15.0.1",
+    "nyc": "^18.0.0",
     "pre-commit": "^1.2.2",
     "tap-nyc": "^1.0.3",
     "tape": "^5.0.0"
